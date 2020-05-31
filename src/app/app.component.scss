@@ -1,0 +1,22 @@
+.todo-list-wrapper {
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+   
+    .todo-list-box {
+        flex: 1 0 auto;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+    }
+    .todo-list-footer {
+        align-self: center;
+        justify-content: center;
+    }
+
+    .messages {
+        position:absolute;
+        max-width:500px;
+    }
+}
+

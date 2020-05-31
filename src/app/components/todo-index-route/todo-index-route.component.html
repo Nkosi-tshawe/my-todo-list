@@ -1,0 +1,19 @@
+<div class="todo-list bg-white rounded-md shadow-lg">
+    <div *ngIf="(fetchData$ | async);else loading">
+        <div class="p-2 pl-4 pr-4 header bg-gray-200">
+            <h3 class="text-uppercase">VIEW ALL</h3>
+        </div>
+        <div *ngIf="(todos$ | async) as todos; else loading" class="divide-y divide-gray-300">
+            <div *ngFor="let todo of todos;let i=index" class="text-left todo-list-item p-2 pl-4 pr-4 " >
+                <app-todo [todo]="todo" (updateStatus)="onChange($event)"></app-todo>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #loading>
+    <div class="p-2 pl-4 pr-4">
+        Loading..
+    </div>
+</ng-template>
+<router-outlet></router-outlet>
+

@@ -1,0 +1,9 @@
+
+    <a [routerLink]="['/todos/'+ todo.id]" class="title">{{todo.title}}</a>
+    <label class="switch" >
+        <input type="checkbox" id="checkbox" [(ngModel)]="status" (change)="onChange()"/>
+        <div class="slider round"></div>
+    </label>
+    
+    <p class="date text-gray-500">{{todo.dueDate | date:'medium'}}</p>
+    <p>Status: {{todo.completed? 'done': 'pending' }}</p>

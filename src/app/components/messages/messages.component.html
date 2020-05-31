@@ -1,0 +1,8 @@
+<div *ngIf="messageService.messages.length">
+    <p>Logs:</p>
+    <div class="">
+        <ul class="text-sm">
+            <li *ngFor="let message of messageService.messages">{{message}}</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="todo-item">
+    <div class="p-2 pl-4 pr-4 header bg-gray-200 inline-flex w-full">
+        <h3 class="text-uppercase flex-grow self-center">VIEW TODO: {{todoId }}</h3>
+        <button (click)="goBack()" class="self-end bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">Go Back</button>
+    </div>
+    <div class="body p-2 pl-4 pr-4 inline-flex w-full" *ngIf="(todo)">
+        <div class="title flex-grow">
+            <p class="text-2xl">{{todo.title}}</p>
+            <p>Status {{todo.completed?'done':'pending'}}</p>
+        </div>
+        <div class="due-date">
+            <div class="date-as-calendar position-pixels">
+                <span class="weekday">{{todo.dueDate | date:'EEEE'}}</span>
+                <span class="day">07</span>
+                <span class="month">{{todo.dueDate | date:'LLLL'}}</span>
+                <span class="year">{{todo.dueDate | date: 'yyyy'}}</span>
+            </div>
+            <div class="time">{{todo.dueDate | date:'shortTime'}}</div>
+        </div>
+    </div>
+</div>

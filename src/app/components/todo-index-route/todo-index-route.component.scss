@@ -1,0 +1,21 @@
+:host ::ng-deep {
+    .todo-list  {
+        min-width:600px;
+    
+    
+        .todo-list-item {
+            position:relative;
+            .title { color: red;
+                font-size:1.125rem;
+                display: inline-block;
+                width:450px;
+                }
+            .switch  { 
+                position:absolute;
+                top:50%;
+                transform:translateY(-50%);
+            }
+            .date { font-size: 1rem; }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+:host ::ng-deep {
+    .todo-item  {
+        min-width:600px;}
+}
+
+.date-as-calendar {
+    font-variant: normal;
+    font-style: normal;
+    font-weight: normal;
+    font-family: Arial;
+    vertical-align: top;
+    color: #303030;
+    background: #E0E0E0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0px 2px 2px -2px black;
+  }
+  
+  .date-as-calendar .weekday,
+  .date-as-calendar .day,
+  .date-as-calendar .month,
+  .date-as-calendar .year,
+  .date-as-calendar .time {
+    text-align: center;
+    line-height: 1.0;
+  }
+  
+  .date-as-calendar .month {
+    font-family: Arial;
+    text-transform: uppercase;
+    background: #F03020;
+    color: #F0F0F0;
+  }
+  
+  .position-pixels.date-as-calendar {
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    height: 64px;
+  }
+  
+  
+  .position-pixels {
+      &.date-as-calendar {
+
+        .weekday,.day,.month,.year,.time {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 1em;
+        }
+
+        .month {
+            top: 0px;
+            font-size: 10px;
+            padding: 2px 0;
+          }
+          .weekday {
+            top: 16px;
+            font-size: 10px;
+          }
+          .day {
+            top: 26px;
+            font-size: 24px;
+          }
+          .year {
+            top: 50px;
+            font-size: 14px;
+          }
+          .time {
+            float:left;
+            padding:3px;
+            width:40px;
+            height:28px;
+            margin-top:15px;
+            margin-left:-3px;
+            font-variant: normal;
+            font-style: normal;
+            font-weight: normal;
+            font-family: Arial;
+            vertical-align: top;
+            font-size:12px;
+            text-align:center;
+            background: #C0C0C0;
+            border: 1px solid #ccc;
+            border-top-right-radius: 3px;
+            overflow: hidden;
+            box-shadow: 0px 2px 2px -2px black;
+          }
+      }
+  }
